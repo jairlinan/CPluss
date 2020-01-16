@@ -1,0 +1,204 @@
+@import url("reset.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+}
+
+body {background: #e9e9e9;}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+a:hover {
+    background: #e74c3c;
+}
+
+.contenedor {
+    background: #ccc;
+    width: 90%;
+    margin: auto;
+
+    /* ---- Flex ---- */
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+}
+/* ------------------------------------------ */
+.mainHeader {
+    background: #2c3e50;
+    flex-basis: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+}
+
+.mainHeader .contentLogo {
+    flex-basis: 100%;
+    box-sizing: border-box;
+
+}
+
+.mainHeader .contentLogo .subcontentLogo {
+    box-sizing: border-box;
+    padding: 20px 90px;
+     display: flex;
+    align-items: center; 
+}
+
+.mainHeader .contentLogo img {
+    width: 60px;
+}
+
+.mainHeader .contentLogo h1 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 10px;
+} 
+
+/* ---------------- Menu de Navegación -------------- */
+.mainHeader .contentMenu {
+    flex-basis: 100%;
+    box-sizing: border-box;
+}
+
+.mainHeader .contentMenu .menu {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #c0392b;
+    padding: 15px 0;
+}
+
+.mainHeader .contentMenu a {
+    color: #fff;
+    font-size: 1em;
+    padding: 15px 10px;
+    /* flex-grow: 1; */
+    flex: 1;
+} 
+
+/* ------------------------ */
+
+.main {
+    flex-basis: 100%;
+    padding: 15px;
+    background: #f3f3f3;
+    text-align: justify;
+}
+.main hr {
+    margin: 15px 0;
+}
+
+
+aside {
+    flex-basis: 100%;
+    background: #f08c00;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+aside .widget {
+    display: flex;
+    flex-flow: column wrap;
+    height: 200px;
+    background: #e67700;
+    /* padding: 20px; */
+    margin: 10px 0;
+} 
+
+
+/* -------- Footer ------------- */
+footer {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1 1 100%;
+    background: #2c3e50;
+    padding: 20px;
+    flex: 1 1 100%;
+}
+
+footer .links {
+    display: flex;
+    background: #c0392b; 
+    padding: 12px;
+} 
+
+footer .links a {
+   padding: 0 5px;
+} 
+
+footer .social {
+    display: flex;
+   margin-left: 10px;
+    /* flex: 1 1 100%; */
+    background: #f59f00; 
+    padding: 10px;
+} 
+
+footer .social a {
+    padding: 0 5px;
+ } 
+
+
+ /* ---- Medias Querys ---- */
+@media screen and (min-width: 481px){
+ 
+    .main {
+        flex-basis: 100%;
+        padding: 15px;
+        background: red;
+        text-align: justify;
+    }
+
+    aside {
+        display: flex;
+        /* flex-flow: row no-wrap; */
+        justify-content: space-between;
+        
+       
+    } 
+
+    aside .widget {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 48%;
+        background: #e67700;
+        /* padding: 20px; */
+        margin: 10px 0;
+    } 
+     
+}
+
+/*
+@media screen and (max-width: 640px){
+ 
+     
+}
+
+@media screen and (min-width: 768px){
+     
+
+}
+     
+@media screen and (min-width: 1024px){
+     
+     
+}
+     
+@media screen and (min-width: 1200px){
+     
+}*/
