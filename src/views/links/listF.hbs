@@ -9,18 +9,8 @@
     </div>
     <div class="row mt-1">
         <div class="col-md-10">
-            {{!-- <div class="row mt-1">
-                <form action="">
-                    <select class="form-control">
-                        <option>Default select</option>
-                    </select>
-                </form>
-
-            </div> --}}
-
             <table class="table table-bordered table-hover">
-                <thead>
-                  
+                <thead>                  
                     <tr class="text-center">
                         <th>#</th>
                         <th>ID</th>
@@ -30,7 +20,7 @@
                         <th>Acción</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody>                        
                     {{#each links }}
                     <tr>
                         <td class="text-right"> {{  @index }} </td>
@@ -48,8 +38,7 @@
                                 <p>No hay registros</p>
                                 <a href="/links/addF" class="btn btn-info">Ingresar Uno</a>
                         </div>
-                    {{/each}}
-
+                    {{/each}}                       
                 </tbody>
             </table>
         </div>
