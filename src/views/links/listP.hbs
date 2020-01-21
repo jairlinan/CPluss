@@ -1,10 +1,17 @@
-<div class="container p-4">
-    <div class="row mt-5">
+<div class="container p-2">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="text-center text-muted">Relación de Proveedores</h1>
+        </div>
+        <div class="col-md-3">
+            <a href="/links/addP" class="btn btn-success">Nuevo Proveedor</a>
+        </div>
+    </div>
+    <div class="row mt-1">
         <div class="col-md-12">
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <h1 class="text-center text-muted">Relación de Proveedores</h1>
                     </tr>
                     <tr class="text-center">
                         <th>#</th>
@@ -16,22 +23,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{!-- {{#if (links) { }} --}}
-                        {{#each links }}
-                            <tr>
-                                <td class="text-right"> {{  @index }} </td>
-                                <td class="text-right"> {{cc}} </td>
-                                <td> {{fullname}} </td>
-                                <td> {{dir}} </td>
-                                <td class="text-right"> {{phone}} </td>
-                                <td class="mx-auto"> 
-                          <a href="/updateP/{{links.cc}}" class="btn btn-info">Update</a>
-                          <a href="/deleteP/{{links.cc}}" class="btn btn-danger mx-auto">Delete</a>
+                    {{#each links }}
+                        <tr>
+                            <td class="text-right"> {{  idprov }} </td>
+                            <td class="text-right"> {{cc}} </td>
+                            <td> {{fullname}} </td>
+                            <td> {{dir}} </td>
+                            <td class="text-right"> {{phone}} </td>
+                            <td class="mx-auto"> 
+                            <a href="/links/editP/{{idprov}}" class="btn btn-info">Update</a>
+                            <a href="/links/deleteP/{{idprov}}" class="btn btn-danger mx-auto">Delete</a>
                         </td>
-                            </tr>
-                        {{/each}}
-                    {{!-- {{/if } }} --}}
-                                
+                        </tr>
+                        {{else}}
+                            <div class="col-md-3 mx-auto p-1">
+                                    <p>No hay registros</p>
+                                    <a href="/links/addP" class="btn btn-info">Ingresar Uno</a>
+                            </div>
+                    {{/each}}                                
                 </tbody>
             </table>
         </div>

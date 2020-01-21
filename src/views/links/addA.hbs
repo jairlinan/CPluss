@@ -8,7 +8,10 @@
                 <div class="card-body">
                     <form action="/links/adda" method="POST">
                         <div class="form-group">
-                            <input type="text" name="fincaid" class="form-control" placeholder="Finca" autofocus>
+                            <input type="text" name="fincaid" class="form-control" placeholder="ID Finca" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="compraid" class="form-control" placeholder="ID de la compra" >
                         </div>
                         <div class="form-group">
                             <input type="text" name="chapeta" class="form-control" placeholder="Chapeta del animal" >
@@ -28,6 +31,7 @@
                         <div class="form-group">
                             <input type="text" name="vrhembra" class="form-control" placeholder="Valor Hembra">
                         </div>
+                        
                     
                         <input type="submit" class="btn btn-primary btn-block" value="Agregar">
                     </form>

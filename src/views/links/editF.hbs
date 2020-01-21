@@ -3,19 +3,20 @@
         <div class="col-md-4 mx-auto">
             <div class="card">
                 <div class="card-header text-center">
-                    <h2>Agregar Finca</h2>
+                    <h2>Editar Finca</h2>
                 </div>
                 <div class="card-body">
-                    <form action="/links/addf" method="POST">
+                    <form action="/links/editF/{{links.idfinca}}" method="POST">
                         <div class="form-group">
-                            <input type="text" name="provid" class="form-control" placeholder="ID del proveedor" autofocus>
+                            <input type="text" name="provid" value="{{links.provid}}"  class="form-control" placeholder="ID del proveedor" readonly>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="namefinca" class="form-control" placeholder="Nombre de la finca">
+                            <input type="text" name="namefinca" value="{{links.namefinca}}" class="form-control" placeholder="Nombre de la finca" autofocus>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="location" class="form-control" placeholder="Ubicación de la finca">
+                            <input type="text" name="location" value="{{links.location}}"  class="form-control" placeholder="Ubicación de la finca">
                         </div>
+                    {{!-- console.log(links); --}}
                         
                         <input type="submit" class="btn btn-primary btn-block" value="Agregar">
                     </form>

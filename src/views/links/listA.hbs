@@ -1,11 +1,16 @@
-<div class="container p-1">
-    <div class="row mt-5">
+<div class="container p-2">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="text-center text-muted">Relación de Animales</h1>
+        </div>
+        <div class="col-md-3">
+            <a href="/links/addA" class="btn btn-success">Nuevo Animal</a>
+        </div>
+    </div>
+    <div class="row mt-1">
         <div class="col-md-12">
             <table class="table table-bordered table-hover">
                 <thead>
-                    <tr>
-                        <h1 class="text-center text-muted">Relación de Animales</h1>
-                    </tr>
                     <tr class="text-center">
                         <th>ID</th>
                         <th>Chapeta</th>
@@ -14,28 +19,35 @@
                         <th>Genero</th>
                         <th>Vr Macho</th>
                         <th>Vr Hembra</th>
+                        <th>ID Finca</th>
+                        <th>ID Compra</th>
                         <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{!-- {{#if (links) { }} --}}
-                        {{#each links }}
-                            <tr>
-                                <td class="text-right"> {{id}} </td>
-                                <td class="text-center"> {{chapeta}} </td>
-                                <td class="text-right"> {{peso}} </td>
-                                <td> {{color}} </td>
-                                <td class="text-center"> {{genero}} </td>
-                                <td class="text-right"> {{vrmacho}} </td>
-                                <td class="text-right"> {{vrhembra}} </td>
-                                <td> 
-                          <a href="/updateP/{{links.cc}}" class="btn btn-info">Update</a>
-                          <a href="/deleteP/{{links.cc}}" class="btn btn-danger">Delete</a>
-                        </td>
-                            </tr>
-                        {{/each}}
-                    {{!-- {{/if } }} --}}
-                                
+                    {{#each links }}
+                        <tr>
+                            <td class="text-right"> {{idanimal}} </td>
+                            <td class="text-center"> {{chapeta}} </td>
+                            <td class="text-right"> {{peso}} </td>
+                            <td> {{color}} </td>
+                            <td class="text-center"> {{genero}} </td>
+                            <td class="text-right"> {{vrmacho}} </td>
+                            <td class="text-right"> {{vrhembra}} </td>
+                            <td class="text-right"> {{fincaid}} </td>
+                            <td class="text-right"> {{compraid}} </td>
+                            <td> 
+                                <a href="/links/editA/{{idanimal}}" class="btn btn-info">Update</a>
+                                <a href="/Links/deleteA/{{idanimal}}" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        {{else}}
+                            <div class="col-md-3 mx-auto p-1">
+                                    <p>No hay registros</p>
+                                    <a href="/links/addA" class="btn btn-info">Ingresar Uno</a>
+                            </div>
+
+                    {{/each}}                                
                 </tbody>
             </table>
         </div>

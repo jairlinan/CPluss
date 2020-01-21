@@ -1,0 +1,49 @@
+<div class="container p-2">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="text-center text-muted">Relación de Compras</h1>
+        </div>
+        <div class="col-md-3">
+            <a href="/links/compra" class="btn btn-success">Nueva Compra</a>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID Compra</th>
+                        <th>ID finca</th>
+                        <th>Fecha de compra</th>
+                        <th>Número de guía</th>
+                        <th>Valor flete</th>
+                        <th># de viajes</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each links }}
+                        <tr>
+                            <td class="text-right"> {{idcompra}} </td>
+                            <td class="text-center"> {{fincaid}} </td>
+                            <td class="text-right"> {{fecha}} </td>
+                            <td class="text-center"> {{guia}} </td>
+                            <td class="text-right"> {{vrflete}} </td>
+                            <td class="text-right"> {{nviajes}} </td>
+                            <td> 
+                            <a href="/links/editC/{{idcompra}}" class="btn btn-info">Update</a>
+                            <a href="/links/deleteC/{{idcompra}}" class="btn btn-danger">Delete</a>
+                        </td>
+                        </tr>
+                         {{else}}
+                            <div class="col-md-3 mx-auto p-1">
+                                    <p>No hay registros</p>
+                                    <a href="/links/compra" class="btn btn-info">Ingresar Uno</a>
+                            </div>
+                    {{/each}}                                
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+</div>

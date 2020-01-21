@@ -1,0 +1,46 @@
+<div class="container p-1">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <h1 class="text-center text-muted">Relación de Animales</h1>
+                    </tr>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>Chapeta</th>
+                        <th>peso</th>
+                        <th>Color</th>
+                        <th>Genero</th>
+                        <th>Vr Macho</th>
+                        <th>Vr Hembra</th>
+                        <th>ID Finca</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{!-- {{#if (links) { }} --}}
+                        {{#each links }}
+                            <tr>
+                                <td class="text-right"> {{id}} </td>
+                                <td class="text-center"> {{chapeta}} </td>
+                                <td class="text-right"> {{peso}} </td>
+                                <td> {{color}} </td>
+                                <td class="text-center"> {{genero}} </td>
+                                <td class="text-right"> {{vrmacho}} </td>
+                                <td class="text-right"> {{vrhembra}} </td>
+                                <td class="text-right"> {{fincaid}} </td>
+                                <td> 
+                          <a href="/updateP/{{links.cc}}" class="btn btn-info">Update</a>
+                          <a href="/deleteP/{{links.cc}}" class="btn btn-danger">Delete</a>
+                        </td>
+                            </tr>
+                        {{/each}}
+                    {{!-- {{/if } }} --}}
+                                
+                </tbody>
+            </table>
+        </div>
+       
+    </div>
+</div>
